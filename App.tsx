@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ButtonEv from './components/ButtonEv';
 import {Text, View, Button} from 'react-native';
 
 function App(): React.JSX.Element {
@@ -23,6 +23,7 @@ function App(): React.JSX.Element {
           age < 18 ? 'You ar child' : 'You can Vote'
         }
       </Text>
+      <ButtonEv/>
     </View>
   );
 }
