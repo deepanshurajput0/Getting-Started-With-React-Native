@@ -1,6 +1,7 @@
 import React from 'react';
 import ButtonEv from './components/ButtonEv';
 import {Text, View, Button} from 'react-native';
+import Hooks from './components/Hooks';
 
 function App(): React.JSX.Element {
   const name:string = 'deepanshu';
@@ -24,6 +25,7 @@ function App(): React.JSX.Element {
         }
       </Text>
       <ButtonEv/>
+      <Hooks/>
     </View>
   );
 }
