@@ -3,6 +3,7 @@ import ButtonEv from './components/ButtonEv';
 import {Text, View, Button} from 'react-native';
 import Style from './components/Style';
 import Hooks from './components/Hooks';
+import Input from './components/Input';
 
 function App(): React.JSX.Element {
   const name:string = 'deepanshu';
@@ -27,7 +28,8 @@ function App(): React.JSX.Element {
       </Text> */}
       {/* <ButtonEv/> */}
       {/* <Hooks/> */}
-      <Style/>
+      {/* <Style/> */}
+      <Input />
     </View>
   );
 }
