@@ -1,6 +1,7 @@
 import React from 'react';
 import ButtonEv from './components/ButtonEv';
 import {Text, View, Button} from 'react-native';
+import Style from './components/Style';
 import Hooks from './components/Hooks';
 
 function App(): React.JSX.Element {
@@ -19,13 +20,14 @@ function App(): React.JSX.Element {
          )
         })
       }
-      <Text style={{fontSize: 25, textAlign: 'center'}} >
+      {/* <Text style={{fontSize: 25, textAlign: 'center'}} >
         {
           age < 18 ? 'You ar child' : 'You can Vote'
         }
-      </Text>
-      <ButtonEv/>
-      <Hooks/>
+      </Text> */}
+      {/* <ButtonEv/> */}
+      {/* <Hooks/> */}
+      <Style/>
     </View>
   );
 }
