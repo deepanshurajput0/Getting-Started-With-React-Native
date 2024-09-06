@@ -6,6 +6,7 @@ import Hooks from './components/Hooks';
 import Input from './components/Input';
 import Form from './components/Form';
 import FlatListUse from './components/FlatListUse';
+import Grids from './components/Grids';
 
 function App(): React.JSX.Element {
   const name:string = 'deepanshu';
@@ -35,7 +36,8 @@ function App(): React.JSX.Element {
       {/* <Style/> */}
       {/* <Input /> */}
       {/* <Form/> */}
-      <FlatListUse />
+      {/* <FlatListUse /> */}
+      <Grids/>
     </View>
   );
 }

@@ -1,7 +1,7 @@
-import { View, Text, FlatList } from 'react-native'
-import React from 'react'
+import { View, Text, FlatList } from 'react-native';
+import React from 'react';
 
-const FlatListUse = () => {
+const Grids = () => {
     type User ={
         id:number;
         name:string;
@@ -42,30 +42,19 @@ const FlatListUse = () => {
         }
     ]
 
-
-
   return (
     <View>
-      <Text>FlatListUse</Text>
-      <FlatList 
-      data={users}
-      renderItem={({item})=><Text style={{fontSize:20, padding:30}} >{item?.name}</Text>}
-      />
-     {/* <ScrollView  >
-     {
-        users.map((item)=>(
-          <Text key={item.id} style={{fontSize:20, padding:30}} >{item.name}</Text>
-        ))
-      }
-     </ScrollView> */}
+      {/* <Text> Grid  </Text> */}
+      <View style={{flex:1 , flexDirection:'row' , flexWrap:'wrap', padding:10}} > 
+        {
+            users.map((item)=>(
+                <Text style={{fontSize:20, padding:20, backgroundColor:'blue',margin:10}} >{item.name}</Text>
+            ))
+        }
+      </View>
     </View>
   )
-}
+ }
 
-export default FlatListUse;
-
-
-
-
-
+export default Grids;
 
