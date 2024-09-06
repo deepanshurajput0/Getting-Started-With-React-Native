@@ -17,6 +17,12 @@ const FlatListUse = () => {
         },{
            id:3,
            name:'John Doe'
+        },{
+          id:4,
+          name:'Peter'
+        },{
+          id:5,
+          name:'Jane'
         }
     ]
 
@@ -25,10 +31,15 @@ const FlatListUse = () => {
   return (
     <View>
       <Text>FlatListUse</Text>
-      <FlatList 
+      {/* <FlatList 
       data={users}
-      renderItem={({item})=><Text>{item?.name}</Text>}
-      />
+      renderItem={({item})=><Text style={{fontSize:20, textAlign:'center'}} >{item?.name}</Text>}
+      /> */}
+      {
+        users.map((item)=>(
+          <Text key={item.id} >{item.name}</Text>
+        ))
+      }
     </View>
   )
 }
