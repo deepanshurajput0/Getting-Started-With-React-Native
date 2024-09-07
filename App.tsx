@@ -9,16 +9,17 @@ import FlatListUse from './components/FlatListUse';
 import Grids from './components/Grids';
 import LifeCycle from './components/LifeCycle';
 import Toggle from './components/Toggle';
+import Responsive from './components/Responsive';
 
 function App(): React.JSX.Element {
   const name:string = 'deepanshu';
   const myInterests:Array<string> = ['Programming','Designing','Editing'];
   const age:number = 18;
   return (
-    <View>
-      <Text style={{fontSize: 25, textAlign: 'center'}}>
+    <View style={{flex:1}} >
+      {/* <Text style={{fontSize: 25, textAlign: 'center'}}>
 
-      </Text>
+      </Text> */}
       {/* {
         myInterests.map((item,i)=>{
          return(
@@ -41,7 +42,8 @@ function App(): React.JSX.Element {
       {/* <FlatListUse /> */}
       {/* <Grids/>
       <LifeCycle/> */}
-      <Toggle/>
+      {/* <Toggle/> */}
+      <Responsive/>
     </View>
   );
 }
