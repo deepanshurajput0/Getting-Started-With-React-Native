@@ -4,8 +4,8 @@ import React,{useEffect, useState} from 'react'
 const LifeCycle = () => {
     const [counter,setCounter] = useState<number>(0)
     useEffect(()=>{
-      console.warn('component rendered')   
-    },[])
+      console.warn(counter)
+    },[counter])
   return (
     <View>
         <Button title='counter' onPress={()=>setCounter(counter+1)} />
