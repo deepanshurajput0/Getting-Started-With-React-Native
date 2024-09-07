@@ -7,6 +7,7 @@ import Input from './components/Input';
 import Form from './components/Form';
 import FlatListUse from './components/FlatListUse';
 import Grids from './components/Grids';
+import LifeCycle from './components/LifeCycle';
 
 function App(): React.JSX.Element {
   const name:string = 'deepanshu';
@@ -38,6 +39,7 @@ function App(): React.JSX.Element {
       {/* <Form/> */}
       {/* <FlatListUse /> */}
       <Grids/>
+      <LifeCycle/>
     </View>
   );
 }
