@@ -8,6 +8,7 @@ import Form from './components/Form';
 import FlatListUse from './components/FlatListUse';
 import Grids from './components/Grids';
 import LifeCycle from './components/LifeCycle';
+import Toggle from './components/Toggle';
 
 function App(): React.JSX.Element {
   const name:string = 'deepanshu';
@@ -38,8 +39,9 @@ function App(): React.JSX.Element {
       {/* <Input /> */}
       {/* <Form/> */}
       {/* <FlatListUse /> */}
-      <Grids/>
-      <LifeCycle/>
+      {/* <Grids/>
+      <LifeCycle/> */}
+      <Toggle/>
     </View>
   );
 }
