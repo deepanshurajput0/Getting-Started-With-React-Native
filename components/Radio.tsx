@@ -3,19 +3,45 @@ import React, { useState } from 'react'
 
 const Radio = () => {
     const [radio, setRadio] = useState<number>(1)
+    type Skill = {
+        id:number,
+        skill:string
+    }
+    const skills:Array<Skill> = [
+      {
+        id:1,
+        skill:'python'
+      },
+      {
+        id:2,
+        skill:'javascript'
+      },
+      {
+        id:3,
+        skill:'Typescript'
+      },{
+        id:4,
+        skill:'Solidity'
+      }
+    ]
+
   return (
     <View style={styles.main} >
-      <TouchableOpacity onPress={()=>setRadio(1)} >
-        <View style={styles.radioflex} >
-            <View style={styles.radiobg} >
-                {
-                    radio === 1 ? <View style={styles.fillRadio} ></View> : null
-                }
-            </View>
-            <Text>Radio 1</Text>
-        </View>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={()=>setRadio(2)} >
+  {
+    skills.map((item)=>(
+      <TouchableOpacity key={item.id} onPress={()=>setRadio(item.id)} >
+      <View style={styles.radioflex} >
+          <View style={styles.radiobg} >
+              {
+                  radio === item.id ? <View style={styles.fillRadio} ></View> : null
+              }
+          </View>
+          <Text>{item.skill}</Text>
+      </View>
+    </TouchableOpacity>
+    ))
+  }
+      {/* <TouchableOpacity onPress={()=>setRadio(2)} >
         <View style={styles.radioflex} >
         <View style={styles.radiobg} >
         {
@@ -24,7 +50,7 @@ const Radio = () => {
             </View>
             <Text>Radio 2</Text>
         </View>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   )
 }
