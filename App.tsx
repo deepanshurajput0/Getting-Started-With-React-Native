@@ -11,6 +11,7 @@ import LifeCycle from './components/LifeCycle';
 import Toggle from './components/Toggle';
 import Responsive from './components/Responsive';
 import Radio from './components/Radio';
+import Loader from './components/Loader';
 
 function App(): React.JSX.Element {
   const name:string = 'deepanshu';
@@ -46,6 +47,7 @@ function App(): React.JSX.Element {
       {/* <Toggle/> */}
       {/* <Responsive/> */}
       {/* <Radio/> */}
+      <Loader/>
     </View>
   );
 }
