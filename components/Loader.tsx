@@ -1,4 +1,4 @@
-import { View, Text, ActivityIndicator, StyleSheet, Button } from 'react-native'
+import { View, ActivityIndicator, StyleSheet, Button } from 'react-native'
 import React, { useState } from 'react'
 
 const Loader = () => {
