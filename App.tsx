@@ -45,7 +45,7 @@ function App(): React.JSX.Element {
       <LifeCycle/> */}
       {/* <Toggle/> */}
       {/* <Responsive/> */}
-      <Radio/>
+      {/* <Radio/> */}
     </View>
   );
 }
