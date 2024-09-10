@@ -1,4 +1,5 @@
 import React from 'react';
+import { StatusBar } from 'react-native'
 import ButtonEv from './components/ButtonEv';
 import {Text, View, Button} from 'react-native';
 import Style from './components/Style';
@@ -50,6 +51,11 @@ function App(): React.JSX.Element {
       {/* <Radio/> */}
       {/* <Loader/> */}
       <ModalBox/>
+      <StatusBar 
+      backgroundColor={'orange'}
+      barStyle={'dark-content'}
+      hidden={false}
+      />
     </View>
   );
 }
