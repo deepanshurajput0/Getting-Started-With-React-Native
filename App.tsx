@@ -1,19 +1,5 @@
 import React from 'react';
-import { StatusBar } from 'react-native'
-import ButtonEv from './components/ButtonEv';
-import {Text, View, Button} from 'react-native';
-import Style from './components/Style';
-import Hooks from './components/Hooks';
-import Input from './components/Input';
-import Form from './components/Form';
-import FlatListUse from './components/FlatListUse';
-import Grids from './components/Grids';
-import LifeCycle from './components/LifeCycle';
-import Toggle from './components/Toggle';
-import Responsive from './components/Responsive';
-import Radio from './components/Radio';
-import Loader from './components/Loader';
-import ModalBox from './components/ModalBox';
+import { StatusBar, Platform, View, Text } from 'react-native'
 
 function App(): React.JSX.Element {
   const name:string = 'deepanshu';
@@ -21,41 +7,14 @@ function App(): React.JSX.Element {
   const age:number = 18;
   return (
     <View style={{flex:1}} >
-      {/* <Text style={{fontSize: 25, textAlign: 'center'}}>
-
-      </Text> */}
-      {/* {
-        myInterests.map((item,i)=>{
-         return(
-          <Text key={i} >
-          {item}
-         </Text>
-         )
-        })
-      } */}
-      {/* <Text style={{fontSize: 25, textAlign: 'center'}} >
-        {
-          age < 18 ? 'You ar child' : 'You can Vote'
-        }
-      </Text> */}
-      {/* <ButtonEv/> */}
-      {/* <Hooks/> */}
-      {/* <Style/> */}
-      {/* <Input /> */}
-      {/* <Form/> */}
-      {/* <FlatListUse /> */}
-      {/* <Grids/>
-      <LifeCycle/> */}
-      {/* <Toggle/> */}
-      {/* <Responsive/> */}
-      {/* <Radio/> */}
-      {/* <Loader/> */}
-      <ModalBox/>
       <StatusBar 
       backgroundColor={'orange'}
       barStyle={'dark-content'}
       hidden={false}
       />
+
+      <Text style={Platform.OS === 'android' ? {color:"red"}:{color:"green"}} >{Platform.OS === 'android' ? 'This is Android': 'This is IOS'}</Text>
+
     </View>
   );
 }
