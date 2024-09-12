@@ -1,6 +1,8 @@
 import React from 'react';
 import {StatusBar, Platform, View, Text, Button} from 'react-native';
 import {WebView} from 'react-native-webview';
+import Login from './components/Login';
+import Home from './components/Home';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
@@ -14,12 +16,15 @@ function App(): React.JSX.Element {
         <Stack.Screen
           name="Login"
           component={Login}
-          options={{title: 'User Login',
+          options={{
+            headerTitle:()=><Button title='Left' />,
+            title: 'User Login',
             headerStyle:{
-              backgroundColor:'blue',
+              backgroundColor:'white',
             },
             headerTitleStyle:{
-              color:'white'
+              color:'white',
+
             }
           }}
         />
@@ -29,23 +34,6 @@ function App(): React.JSX.Element {
   );
 }
 
-const Home = () => {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Home Screen </Text>
-    </View>
-  );
-};
-const Login = props => {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Login Page </Text>
-      <Button
-        title="Go to Home"
-        onPress={() => props.navigation.navigate('Home')}
-      />
-    </View>
-  );
-};
+
 
 export default App;
